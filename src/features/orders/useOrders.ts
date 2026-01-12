@@ -110,8 +110,17 @@ const createSocketMessage = (orders: Order[]): MockWebSocketMessage => {
   return Math.random() > 0.45 ? createStatusUpdate(orders) : createNewOrder(orders);
 };
 
+interface WebSocketLike {
+  connect: () => void;
+  close: (code?: number, reason?: string) => void;
+  onopen?: () => void;
+  onmessage?: (event: { data: string }) => void;
+  onclose?: () => void;
+  onerror?: (error: Error) => void;
+}
+
 interface UseOrdersRealtimeOptions {
-  createSocket?: (createMessage: () => MockWebSocketMessage) => MockWebSocket;
+  createSocket?: (createMessage: () => MockWebSocketMessage) => WebSocketLike;
 }
 
 export const useOrdersRealtime = (options: UseOrdersRealtimeOptions = {}) => {

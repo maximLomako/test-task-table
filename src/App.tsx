@@ -14,7 +14,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import { buildTheme } from './theme/theme';
 import { OrdersTable } from './components/OrdersTable/OrdersTable';
 import { OrderDetailsModal } from './components/OrderDetailsModal/OrderDetailsModal';
-import { ConnectionStatus } from './components/ConnectionStatus/ConnectionStatus';
+import { ConnectionStatusIndicator } from './components/ConnectionStatus/ConnectionStatus';
 import { useOrderStatusMutation, useOrders, useOrdersRealtime } from './features/orders/useOrders';
 import type { Order } from './features/orders/types';
 
@@ -64,7 +64,7 @@ export const App = () => {
                 </Typography>
               </Box>
               <Stack direction="row" spacing={2} alignItems="center">
-                <ConnectionStatus status={status} />
+                <ConnectionStatusIndicator status={status} />
                 <Tooltip title={mode === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}>
                   <IconButton onClick={toggleMode}>
                     {mode === 'light' ? <DarkModeIcon /> : <LightModeIcon />}

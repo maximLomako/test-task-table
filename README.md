@@ -3,7 +3,7 @@
 Frontend Developer Test Assignment: mini dashboard for managing e-commerce orders with realtime updates, sorting, filtering, search, pagination, and editable order details.
 
 ## Live Demo (GitHub Pages)
-- Built version: `https://<github-username>.github.io/<repo-name>/`
+- Built version: `https://maximLomako.github.io/test-task-table/`
 
 ## Setup
 

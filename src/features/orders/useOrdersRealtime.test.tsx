@@ -50,7 +50,7 @@ describe('useOrdersRealtime', () => {
 
     const createSocket = (cb: () => MockWebSocketMessage) => {
       socket = new FakeSocket();
-      socket.onmessage = (event) => {
+      socket.onmessage = () => {
         cb();
       };
       return socket;

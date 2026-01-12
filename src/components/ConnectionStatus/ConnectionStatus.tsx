@@ -3,19 +3,19 @@ import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
-import type { ConnectionStatus } from '../../features/orders/useOrders';
+import type { ConnectionStatus as ConnectionStatusType } from '../../features/orders/useOrders';
 
 interface ConnectionStatusProps {
-  status: ConnectionStatus;
+  status: ConnectionStatusType;
 }
 
-const statusColor: Record<ConnectionStatus, 'success' | 'warning' | 'default'> = {
+const statusColor: Record<ConnectionStatusType, 'success' | 'warning' | 'default'> = {
   Connected: 'success',
   Reconnecting: 'warning',
   Disconnected: 'default'
 };
 
-export const ConnectionStatus = ({ status }: ConnectionStatusProps) => {
+export const ConnectionStatusIndicator = ({ status }: ConnectionStatusProps) => {
   return (
     <Box role="status" aria-live="polite">
       <Stack direction="row" spacing={1} alignItems="center">
