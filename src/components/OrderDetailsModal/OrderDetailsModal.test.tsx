@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { OrderDetailsModal } from './OrderDetailsModal';
+import { OrderDetailsModal } from '../index';
 import type { Order } from '../../features/orders/types';
 import { vi } from 'vitest';
 

@@ -12,9 +12,7 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import { ThemeProvider } from '@mui/material/styles';
 import { buildTheme } from './theme/theme';
-import { OrdersTable } from './components/OrdersTable/OrdersTable';
-import { OrderDetailsModal } from './components/OrderDetailsModal/OrderDetailsModal';
-import { ConnectionStatusIndicator } from './components/ConnectionStatus/ConnectionStatus';
+import { ConnectionStatusIndicator, OrderDetailsModal, OrdersTable } from './components';
 import { useOrderStatusMutation, useOrders, useOrdersRealtime } from './features/orders/useOrders';
 import type { Order } from './features/orders/types';
 

@@ -1,7 +1,7 @@
 import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { vi } from 'vitest';
-import { OrdersTable } from './OrdersTable';
+import { OrdersTable } from '../index';
 import type { Order } from '../../features/orders/types';
 
 const baseOrder = (overrides: Partial<Order>): Order => ({
